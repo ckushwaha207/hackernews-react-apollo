@@ -24,7 +24,6 @@ class Link extends Component {
       </div>
     )
   }
-  
   _voteForLink = async () => {
     const userId = localStorage.getItem(GC_USER_ID)
     const voterIds = this.props.link.votes.map(vote => vote.user.id)
@@ -37,7 +36,7 @@ class Link extends Component {
 
     await this.props.createVoteMutation({
       variables: {
-        userId, 
+        userId,
         linkId
       },
       update: (store, {data: {createVote} }) => {

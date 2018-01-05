@@ -48,7 +48,7 @@ const ALL_LINKS_SEARCH_QUERY = gql `
             OR: [{
                 url_contains: $searchText
             }, {
-               description_contains: $searchText 
+               description_contains: $searchText
             }]
         }) {
             id
